@@ -1,0 +1,17 @@
+{
+  "name": "whisk-canirequire",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "apicache": "0.0.12",
+    "async": "^1.5.1",
+    "cfenv": "^1.0.3",
+    "express": "^4.13.3",
+    "request": "^2.67.0"
+  }
+}
