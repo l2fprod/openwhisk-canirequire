@@ -2,4 +2,4 @@ applications:
 - services:
   - whisk
   name: openwhisk-canirequire
-  memory: 128M
+  memory: 256M

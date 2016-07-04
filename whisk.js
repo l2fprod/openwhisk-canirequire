@@ -49,8 +49,10 @@ function Whisk(url) {
         if (err) {
           console.log(err);
           callback(err);
+        } else if (body && body.response && body.response.result) {
+          callback(null, body.response.result);          
         } else {
-          callback(null, body.response.result);
+          callback("no result in response");
         }
       });
   };
