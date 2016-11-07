@@ -11,7 +11,7 @@ function Whisk(url) {
       method: 'PUT',
       json: {
         "exec": {
-          "kind": "nodejs",
+          "kind": "nodejs:6",
           "code": actionCode
         }
       },
