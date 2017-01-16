@@ -58,8 +58,6 @@ to the node environment where the task is running. It caches the list of modules
   npm start
   ```
 
-A pre-compiled version is currently committed for convenience.
-
 ---
 
 This is a sample application created for demonstration only.
