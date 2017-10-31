@@ -16,13 +16,17 @@ function main() {
         return dir[0] !== '.';
       })
       .reduce(function (prev, dep) {
-        var depObj = JSON.parse(fs.readFileSync(__dirname + '/node_modules/' + dep + '/package.json'));
-
-        return prev.concat({
-          name: depObj.name,
-          version: depObj.version,
-          homepage: depObj.homepage
-        });
+        try {
+          var depObj = JSON.parse(fs.readFileSync(__dirname + '/node_modules/' + dep + '/package.json'));
+          return prev.concat({
+            name: depObj.name,
+            version: depObj.version,
+            homepage: depObj.homepage
+          });
+        } catch (error) {
+          console.log(error);
+          return prev;
+        }
       }, []))
   }
   return result;
